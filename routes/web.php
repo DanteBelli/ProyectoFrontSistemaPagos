@@ -49,7 +49,16 @@ Route::middleware('auth')->group(function () {
         return view('cajaChica.blade.php');
     })->name('cajaChica');
 
-
+    /*Rutas dropDownComedor*/
+    Route::get('/comedor.sdg', function () {        
+        return view('comedorSdg.blade.php');
+    })->name('comedor.sdg');
+    Route::get('/comedor.liq', function () {        
+        return view('comedorLiq.liq.php');
+    })->name('comedor.liq');
+    Route::get('/comedor.op', function () {        
+        return view('comedorOp.blade.php');
+    })->name('comedor.op');
 
 
 
