@@ -93,7 +93,31 @@
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+                {{ __('Principal') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('sdg')" :active="request()->routeIs('sdg')">
+                        {{ __('SDG') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('sdgOc')" :active="request()->routeIs('sdgOC')">
+                        {{ __('SDG OC') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('liq')" :active="request()->routeIs('liq')">
+                        {{ __('LIQ') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('dispo')" :active="request()->routeIs('dispo')">
+                        {{ __('DISPO') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('op')" :active="request()->routeIs('op')">
+                        {{ __('OP') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('presu')" :active="request()->routeIs('presu')">
+                        {{ __('PRESU') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('sueldos')" :active="request()->routeIs('sueldos')">
+                        {{ __('Sueldos') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('cajaChica')" :active="request()->routeIs('cajaChica')">
+                        {{ __('Caja Chica') }}
             </x-responsive-nav-link>
         </div>
 
@@ -116,7 +140,7 @@
                     <x-responsive-nav-link :href="route('logout')"
                             onclick="event.preventDefault();
                                         this.closest('form').submit();">
-                        {{ __('Log Out') }}
+                        {{ __('Cerrar Sesion') }}
                     </x-responsive-nav-link>
                 </form>
             </div>
