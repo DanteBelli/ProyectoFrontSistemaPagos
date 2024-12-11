@@ -59,7 +59,7 @@
                         </div>
                         <div class="p-6 bg-gray-100 dark:bg-gray-700 border border-gray-200 rounded-lg shadow-sm hover:bg-blue-50 transition duration-300 ease-in-out">
                             <h3 class="text-center text-lg font-semibold text-gray-800 dark:text-gray-200">
-                                Ranking Cant. SDG x PROVEEDOR({{ now()->year }})
+                                Cant. SDG x PROVEEDOR({{ now()->year }})
                             </h3>
                             <!--Grilla -->
                             <div class="overflow-x-auto mt-6">
@@ -67,7 +67,7 @@
                                     <thead>
                                         <tr class="bg-gray-200 dark:bg-gray-600">
                                             <th class="px-4 py-2 text-left text-gray-700 dark:text-gray-300">Cant.</th>
-                                            <th class="px-4 py-2 text-left text-gray-700 dark:text-gray-300">Proveedor</th>
+                                            <th class="px-4 py-2 text-left text-gray-700 dark:text-gray-300">Proveedor </th>
                                             </tr>
                                     </thead>
                                     <tbody>
