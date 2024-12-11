@@ -61,25 +61,85 @@
                             <h3 class="text-center text-lg font-semibold text-gray-800 dark:text-gray-200">
                                 Ranking Cant. SDG x PROVEEDOR({{ now()->year }})
                             </h3>
-                            <p class="mt-4 text-center text-gray-600 dark:text-gray-400">
-                                Descripción de la sección.
-                            </p>
+                            <!--Grilla -->
+                            <div class="overflow-x-auto mt-6">
+                                <table class="min-w-full table-auto">
+                                    <thead>
+                                        <tr class="bg-gray-200 dark:bg-gray-600">
+                                            <th class="px-4 py-2 text-left text-gray-700 dark:text-gray-300">Cant.</th>
+                                            <th class="px-4 py-2 text-left text-gray-700 dark:text-gray-300">Proveedor</th>
+                                            </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-b">
+                                            <td class="px-4 py-2 text-gray-700 dark:text-gray-300">Dato 1</td>
+                                            <td class="px-4 py-2 text-gray-700 dark:text-gray-300">Dato 2</t>
+
+                                        </tr>
+                                        <tr class="border-b">
+                                            <td class="px-4 py-2 text-gray-700 dark:text-gray-300">Dato 5</td>
+                                            <td class="px-4 py-2 text-gray-700 dark:text-gray-300">Dato 6</td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                         <div class="p-6 bg-gray-100 dark:bg-gray-700 border border-gray-200 rounded-lg shadow-sm hover:bg-blue-50 transition duration-300 ease-in-out">
                             <h3 class="text-center text-lg font-semibold text-gray-800 dark:text-gray-200">
                                 Cant. Creados Hoy ({{ now()->format('d/m/Y') }})
                             </h3>
-                            <p class="mt-4 text-center text-gray-600 dark:text-gray-400">
-                                Descripción de la sección.
-                            </p>
+                            <!--Grilla -->
+                            <div class="overflow-x-auto mt-6">
+                                <table class="min-w-full table-auto">
+                                    <thead>
+                                        <tr class="bg-gray-200 dark:bg-gray-600">
+                                            <th class="px-4 py-2 text-left text-gray-700 dark:text-gray-300">Descripción</th>
+                                            <th class="px-4 py-2 text-left text-gray-700 dark:text-gray-300">Cant.</th>
+                                            </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-b">
+                                            <td class="px-4 py-2 text-gray-700 dark:text-gray-300">Dato 1</td>
+                                            <td class="px-4 py-2 text-gray-700 dark:text-gray-300">Dato 2</t>
+
+                                        </tr>
+                                        <tr class="border-b">
+                                            <td class="px-4 py-2 text-gray-700 dark:text-gray-300">Dato 5</td>
+                                            <td class="px-4 py-2 text-gray-700 dark:text-gray-300">Dato 6</td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                         <div class="p-6 bg-gray-100 dark:bg-gray-700 border border-gray-200 rounded-lg shadow-sm hover:bg-blue-50 transition duration-300 ease-in-out">
                             <h3 class="text-center text-lg font-semibold text-gray-800 dark:text-gray-200">
                                Cant. Entidad CON / SIN ({{now()->year}})
                             </h3>
-                            <p class="mt-4 text-center text-gray-600 dark:text-gray-400">
-                                Descripción de la sección 1.
-                            </p>
+                            <!--Grilla -->
+                            <div class="overflow-x-auto mt-6">
+                                <table class="min-w-full table-auto">
+                                    <thead>
+                                        <tr class="bg-gray-200 dark:bg-gray-600">
+                                            <th class="px-4 py-2 text-left text-gray-700 dark:text-gray-300">Descripción</th>
+                                            <th class="px-4 py-2 text-left text-gray-700 dark:text-gray-300">Cantidad</th>
+                                            </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-b">
+                                            <td class="px-4 py-2 text-gray-700 dark:text-gray-300">Dato 1</td>
+                                            <td class="px-4 py-2 text-gray-700 dark:text-gray-300">Dato 2</t>
+
+                                        </tr>
+                                        <tr class="border-b">
+                                            <td class="px-4 py-2 text-gray-700 dark:text-gray-300">Dato 5</td>
+                                            <td class="px-4 py-2 text-gray-700 dark:text-gray-300">Dato 6</td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                 </div>
             </div>
