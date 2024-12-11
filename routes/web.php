@@ -18,46 +18,46 @@ Route::middleware('auth')->group(function () {
 
     /*Rutas para el NavBar , estan dentro de auth para darle seguridad al sistema , asi me aseguro que este autenticado el usuario*/
     Route::get('/sdg', function () {        
-        return view('sdg.blade.php');
+        return view('consultas.sdg');
     })->name('sdg');
 
     Route::get('/sdgOc', function () {        
-        return view('sdgOc.blade.php');
+        return view('consultas.sdgOc');
     })->name('sdgOc');
 
     Route::get('/liq', function () {        
-        return view('liq.blade.php');
+        return view('consultas.liq');
     })->name('liq');
 
     Route::get('/dispo', function () {        
-        return view('dispo.blade.php');
+        return view('consultas.dispo');
     })->name('dispo');
 
     Route::get('/op', function () {        
-        return view('op.blade.php');
+        return view('consultas.op');
     })->name('op');
 
     Route::get('/presu', function () {        
-        return view('presu.blade.php');
+        return view('consultas.presu');
     })->name('presu');
 
     Route::get('/sueldos', function () {        
-        return view('sueldos.blade.php');
+        return view('consultas.sueldos');
     })->name('sueldos');
 
     Route::get('/cajaChica', function () {        
-        return view('cajaChica.blade.php');
+        return view('consultas.cajaChica');
     })->name('cajaChica');
 
     /*Rutas dropDownComedor*/
     Route::get('/comedor.sdg', function () {        
-        return view('comedorSdg.blade.php');
+        return view('consultas.comedor.sdgCom');
     })->name('comedor.sdg');
     Route::get('/comedor.liq', function () {        
-        return view('comedorLiq.liq.php');
+        return view('consultas.comedor.liqCom');
     })->name('comedor.liq');
     Route::get('/comedor.op', function () {        
-        return view('comedorOp.blade.php');
+        return view('consultas.comedor.opCom');
     })->name('comedor.op');
 
 
