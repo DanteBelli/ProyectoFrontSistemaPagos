@@ -158,6 +158,31 @@
                         {{ __('Caja Chica') }}
             </x-responsive-nav-link>
         </div>
+           <!-- Comedor Dropdown (Responsive) -->
+           <div class="space-y-1 pt-3">
+            <p class="text-gray-500 dark:text-gray-400">{{ __('Comedor') }}</p>
+            <form method="POST" action="{{ route('comedor.sdg') }}">
+                @csrf
+                <x-responsive-nav-link :href="route('comedor.sdg')"
+                    onclick="event.preventDefault(); this.closest('form').submit();">
+                    {{ __('SDG') }}
+                </x-responsive-nav-link>
+            </form>
+            <form method="POST" action="{{ route('comedor.liq') }}">
+                @csrf
+                <x-responsive-nav-link :href="route('comedor.liq')"
+                    onclick="event.preventDefault(); this.closest('form').submit();">
+                    {{ __('LIQ') }}
+                </x-responsive-nav-link>
+            </form>
+            <form method="POST" action="{{ route('comedor.op') }}">
+                @csrf
+                <x-responsive-nav-link :href="route('comedor.op')"
+                    onclick="event.preventDefault(); this.closest('form').submit();">
+                    {{ __('OP') }}
+                </x-responsive-nav-link>
+            </form>
+        </div>
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200 dark:border-gray-600">
             <div class="px-4">
