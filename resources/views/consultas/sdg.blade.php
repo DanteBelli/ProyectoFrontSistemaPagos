@@ -2,44 +2,46 @@
 @section('content')
     <div class="container">
         <h1>Consultar SDG</h1>
-        
-        <!-- Tabla de datos -->
-        <table class="custom-table"> 
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Entidad</th>
-                    <th>ID</th>
-                    <th>Numero</th>
-                    <th>Año</th>
-                    <th>Fecha</th>
-                    <th>Proveedor</th>
-                    <th>Comprobante</th>
-                    <th>Nro Compro</th>
-                    <th>Importe</th>
-                    <th>Concepto</th>
-                    <th>Estado</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach(range(1, 10) as $row) 
+
+        <!-- Tabla de datos responsiva -->
+        <div class="table-responsive">
+            <table class="custom-table"> 
+                <thead>
                     <tr>
-                        <td><input type="checkbox" class="check-row" data-id="row{{ $row }}" /></td>
-                        <td>Fila {{ $row }} - Columna 1</td>
-                        <td>Fila {{ $row }} - Columna 2</td>
-                        <td>Fila {{ $row }} - Columna 3</td>
-                        <td>Fila {{ $row }} - Columna 4</td>
-                        <td>Fila {{ $row }} - Columna 5</td>
-                        <td>Fila {{ $row }} - Columna 6</td>
-                        <td>Fila {{ $row }} - Columna 7</td>
-                        <td>Fila {{ $row }} - Columna 8</td>
-                        <td>Fila {{ $row }} - Columna 9</td>
-                        <td>Fila {{ $row }} - Columna 10</td>
-                        <td>Fila {{ $row }} - Columna 11</td>
+                        <th></th>
+                        <th>Entidad</th>
+                        <th>ID</th>
+                        <th>Numero</th>
+                        <th>Año</th>
+                        <th>Fecha</th>
+                        <th>Proveedor</th>
+                        <th>Comprobante</th>
+                        <th>Nro Compro</th>
+                        <th>Importe</th>
+                        <th>Concepto</th>
+                        <th>Estado</th>
                     </tr>
-                @endforeach
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    @foreach(range(1, 10) as $row) 
+                        <tr>
+                            <td><input type="checkbox" class="check-row" data-id="row{{ $row }}" /></td>
+                            <td>Fila {{ $row }} - Columna 1</td>
+                            <td>Fila {{ $row }} - Columna 2</td>
+                            <td>Fila {{ $row }} - Columna 3</td>
+                            <td>Fila {{ $row }} - Columna 4</td>
+                            <td>Fila {{ $row }} - Columna 5</td>
+                            <td>Fila {{ $row }} - Columna 6</td>
+                            <td>Fila {{ $row }} - Columna 7</td>
+                            <td>Fila {{ $row }} - Columna 8</td>
+                            <td>Fila {{ $row }} - Columna 9</td>
+                            <td>Fila {{ $row }} - Columna 10</td>
+                            <td>Fila {{ $row }} - Columna 11</td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
 
         <!-- Filtros debajo de la tabla -->
         <div class="filter-container" style="margin-top: 20px;">
@@ -111,86 +113,117 @@
 
     <!-- Estilos para la tabla y filtros -->
     <style>
-       /* Borde blanco alrededor del filtrador */
-.filter-container {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    border: 2px solid white;  /* Borde blanco */
-    padding: 10px;            /* Espaciado interior */
-    background-color: #444;  /* Fondo oscuro para el área de filtros */
-    margin-top: 20px;         /* Separación con la tabla */
-    border-radius: 8px;       /* Bordes redondeados */
-}
+        /* Contenedor de filtros responsivo */
+        .filter-container {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap; /* Permite que los elementos se apilen en pantallas pequeñas */
+            align-items: center;
+            border: 2px solid white;
+            padding: 10px;
+            background-color: #444;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
 
-/* Estilo para los campos de filtro */
-.filter-field {
-    padding: 8px;
-    font-size: 14px;
-    border: 1px solid #ccc;  /* Borde de los campos de filtro */
-    border-radius: 5px;      /* Bordes redondeados */
-}
+        .filter-field {
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            flex-grow: 1; /* Hace que los filtros ocupen el espacio disponible */
+            min-width: 120px; /* Establece un ancho mínimo */
+        }
 
-/* Estilo para el botón Filtrar */
-.filter-container button:nth-child(3) {
-    background-color: #28a745;  /* Verde */
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
+        .filter-container button {
+            padding: 8px 16px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 10px; /* Para que los botones estén separados en pantallas pequeñas */
+        }
 
-.filter-container button:nth-child(3):hover {
-    background-color: #218838; /* Verde más oscuro al pasar el ratón */
-}
+        /* Botón Filtrar */
+        .filter-container button:nth-child(3) {
+            background-color: #28a745;
+            color: white;
+            border: none;
+        }
 
-/* Estilo para el botón Eliminar Filtros */
-.filter-container button:nth-child(4) {
-    background-color: #dc3545;  /* Rojo */
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
+        .filter-container button:nth-child(3):hover {
+            background-color: #218838;
+        }
 
-.filter-container button:nth-child(4):hover {
-    background-color: #c82333; /* Rojo más oscuro al pasar el ratón */
-}
+        /* Botón Eliminar Filtros */
+        .filter-container button:nth-child(4) {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+        }
 
-/* Tabla personalizada */
-.custom-table {
-    border-collapse: collapse;
-    width: 100%;
-    background-color: #333;
-}
+        .filter-container button:nth-child(4):hover {
+            background-color: #c82333;
+        }
 
-.custom-table th, .custom-table td {
-    border: 1px solid white;
-    color: white;
-    padding: 8px;
-    text-align: center;
-}
+        /* Estilo para la tabla responsiva */
+        .table-responsive {
+            overflow-x: auto;
+        }
 
-.custom-table th {
-    background-color: #444;
-}
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #333;
+            table-layout: auto; /* Cambiado para que la tabla se ajuste dinámicamente */
+        }
 
-.custom-table tbody tr:nth-child(even) {
-    background-color: #555;
-}
+        .custom-table th, .custom-table td {
+            border: 1px solid white;
+            color: white;
+            padding: 8px;
+            text-align: center;
+        }
 
-.custom-table tbody tr:nth-child(odd) {
-    background-color: #666;
-}
+        .custom-table th {
+            background-color: #444;
+        }
 
-.custom-table td input[type="checkbox"] {
-    accent-color: white;
-}
+        .custom-table tbody tr:nth-child(even) {
+            background-color: #555;
+        }
+
+        .custom-table tbody tr:nth-child(odd) {
+            background-color: #666;
+        }
+
+        /* Estilo de los checkboxes */
+        .custom-table td input[type="checkbox"] {
+            accent-color: white;
+        }
+
+        /* Responsividad en pantallas pequeñas */
+        @media (max-width: 768px) {
+            .custom-table th, .custom-table td {
+                font-size: 12px;
+                padding: 6px;
+            }
+
+            .filter-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .filter-container button {
+                width: 100%; /* Los botones ocupan todo el ancho */
+                margin-top: 5px;
+            }
+
+            /* Hacer que la tabla sea más legible en móviles */
+            .custom-table td, .custom-table th {
+                word-wrap: break-word;
+                white-space: normal; /* Permite que el texto se ajuste en móviles */
+            }
+        }
     </style>
 @endsection
