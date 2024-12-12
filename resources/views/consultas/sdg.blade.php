@@ -71,4 +71,24 @@
             <button onclick="sdgConsultar()">Consultar SDG </button>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- Modal Error-->
+    <div id="errorModal" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden z-50">
+        <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full">
+            <h3 class="text-lg font-semibold text-red-600">Error</h3>
+            <p class="mt-2 text-sm">Por favor, selecciona una fila antes de consultar.</p>
+            <div class="mt-4 text-right">
+                <button onclick="closeModal()" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Cerrar</button>
+            </div>
+        </div>
+    </div>
 </x-layouts.app>

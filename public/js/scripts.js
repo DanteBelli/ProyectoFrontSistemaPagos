@@ -37,7 +37,7 @@ function clearFilters() {
     filterData(); // Vuelve a mostrar todas las filas
 }
 
-//Funcion para re dirigiar a SDGConsultar
+// Función para redirigir a SDGConsultar
 function sdgConsultar() {
     const selectedCheckbox = document.querySelector('.check-row:checked'); // Buscar la primera casilla de verificación seleccionada
     if (selectedCheckbox) {
@@ -47,6 +47,14 @@ function sdgConsultar() {
         // Redirigir a la ruta con el ID de la fila seleccionada como parámetro
         window.location.href = `/sdgConsultar?id=${idCell}`;
     } else {
-        alert("Por favor, selecciona una fila antes de consultar.");
+        // Mostrar el modal de error
+        const modal = document.getElementById('errorModal');
+        modal.classList.remove('hidden');
     }
+}
+
+// Función para cerrar el modal
+function closeModal() {
+    const modal = document.getElementById('errorModal');
+    modal.classList.add('hidden');
 }
