@@ -71,16 +71,6 @@
             <button onclick="sdgConsultar()">Consultar SDG </button>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
     <!-- Modal Error-->
     <div id="errorModal" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden z-50">
         <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full">

@@ -37,7 +37,7 @@ function clearFilters() {
     filterData(); // Vuelve a mostrar todas las filas
 }
 
-// Función para redirigir a SDGConsultar
+// Función para redirigir a SDGConsultar y el error si no se selecciona nada
 function sdgConsultar() {
     const selectedCheckbox = document.querySelector('.check-row:checked'); // Buscar la primera casilla de verificación seleccionada
     if (selectedCheckbox) {

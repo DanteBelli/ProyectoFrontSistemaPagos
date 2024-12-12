@@ -18,31 +18,24 @@ Route::middleware('auth')->group(function () {
     Route::get('/sdg', function () {        
         return view('consultas.sdg');
     })->name('sdg');
-
     Route::get('/sdgOc', function () {        
         return view('consultas.sdgOc');
     })->name('sdgOc');
-
     Route::get('/liq', function () {        
         return view('consultas.liq');
     })->name('liq');
-
     Route::get('/dispo', function () {        
         return view('consultas.dispo');
     })->name('dispo');
-
     Route::get('/op', function () {        
         return view('consultas.op');
     })->name('op');
-
     Route::get('/presu', function () {        
         return view('consultas.presu');
     })->name('presu');
-
     Route::get('/sueldos', function () {        
         return view('consultas.sueldos');
     })->name('sueldos');
-
     Route::get('/cajaChica', function () {        
         return view('consultas.cajaChica');
     })->name('cajaChica');
