@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
-
 // Función para filtrar los datos de la tabla
 function filterData() {
     const category = document.getElementById('category-filter').value.toLowerCase();
@@ -29,14 +28,12 @@ function filterData() {
         }
     });
 }
-
 // Función para limpiar los filtros
 function clearFilters() {
     document.getElementById('category-filter').value = '';
     document.getElementById('name-filter').value = '';
     filterData(); // Vuelve a mostrar todas las filas
 }
-
 // Función para redirigir a SDGConsultar y el error si no se selecciona nada
 function sdgConsultar() {
     const selectedCheckbox = document.querySelector('.check-row:checked'); // Buscar la primera casilla de verificación seleccionada
@@ -52,7 +49,6 @@ function sdgConsultar() {
         modal.classList.remove('hidden');
     }
 }
-
 // Función para cerrar el modal
 function closeModal() {
     const modal = document.getElementById('errorModal');
