@@ -36,3 +36,17 @@ function clearFilters() {
     document.getElementById('name-filter').value = '';
     filterData(); // Vuelve a mostrar todas las filas
 }
+
+//Funcion para re dirigiar a SDGConsultar
+function sdgConsultar() {
+    const selectedCheckbox = document.querySelector('.check-row:checked'); // Buscar la primera casilla de verificación seleccionada
+    if (selectedCheckbox) {
+        const row = selectedCheckbox.closest('tr'); // Obtener la fila (tr) que contiene el checkbox seleccionado
+        const idCell = row.cells[2].textContent.trim(); // Obtener el valor de la columna "ID" (tercer columna)
+
+        // Redirigir a la ruta con el ID de la fila seleccionada como parámetro
+        window.location.href = `/sdgConsultar?id=${idCell}`;
+    } else {
+        alert("Por favor, selecciona una fila antes de consultar.");
+    }
+}

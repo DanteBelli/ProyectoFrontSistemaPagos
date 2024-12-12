@@ -1,6 +1,8 @@
 <?php
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -55,5 +57,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/comedor.op', function () {        
         return view('consultas.comedor.opCom');
     })->name('comedor.op');
+
+    /**Ruta SDGConsulta  envio el id como parametro*/
+    Route::get('/sdgConsultar', function (Request $request) {
+        $rowId = $request->get('id'); // Obtener el ID de la fila seleccionada
+        return view('consultas.sdgConsultar', compact('rowId')); // Pasar el ID a la vista
+    })->name('sdgConsultar');
+
 });
 require __DIR__.'/auth.php';

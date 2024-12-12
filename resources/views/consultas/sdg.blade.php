@@ -68,7 +68,7 @@
             <input type="text" id="name-filter" class="filter-field" placeholder="Buscar por nombre...">
             <button onclick="filterData()">Filtrar</button>
             <button onclick="clearFilters()">Eliminar Filtros</button>
-            <button>Consultar SDG</button>
+            <button onclick="sdgConsultar()">Consultar SDG </button>
         </div>
     </div>
 </x-layouts.app>
