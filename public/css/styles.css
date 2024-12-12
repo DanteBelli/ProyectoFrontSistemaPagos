@@ -50,6 +50,22 @@
 .filter-container button:nth-child(4):hover {
     background-color: #c82333;
 }
+/* Botón Siguiente */
+.filter-container button:nth-child(5) {
+    background-color: #28a745; /* Color verde */
+    color: white;
+    border: none;
+    padding: 16px 16px; /* Tamaño cuadrado */
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: auto; /* No expandirse a toda la pantalla */
+}
+
+.filter-container button:nth-child(5):hover {
+    background-color: #218838; /* Verde más oscuro en hover */
+}
 
 /* Estilo para la tabla responsiva */
 .table-responsive {
