@@ -1,13 +1,13 @@
-@extends('layouts.app')
-@section('content')
-    <!--Archivo con los estilos de la grilla y el buscador , ubicado en public -->
-    <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
-    <!-- Incluyo el javascript para controlar el check de la grilla y el filtrador , se encuentra en public -->
-    <script src="{{ asset('js/scripts.js') }}"></script>
-    <div class="container">
-        <h1>Consultar SDG</h1>
-        <!-- Tabla de datos responsiva -->
-        <div class="table-responsive">
+<x-app-layout>
+    <x-slot name="header">
+        <h1 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+            {{ __('Consultar SDG') }}
+        </h1>
+        <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+        <script src="{{ asset('js/scripts.js') }}"></script>
+    </x-slot>
+    <div class="content">
+    <div class="table-responsive">
             <table class="custom-table"> 
                 <thead>
                     <tr>
@@ -30,7 +30,7 @@
                         <tr>
                             <td><input type="checkbox" class="check-row" data-id="row{{ $row }}" /></td>
                             <td>Fila {{ $row }} - Columna 1</td>
-                            <td>Fila {{ $row }} - Columna 2</td>
+                            <td>2</td>
                             <td>Fila {{ $row }} - Columna 3</td>
                             <td>Fila {{ $row }} - Columna 4</td>
                             <td>Fila {{ $row }} - Columna 5</td>
@@ -70,4 +70,4 @@
             <button onclick="clearFilters()">Eliminar Filtros</button>
         </div>
     </div>
-@endsection
+</x-layouts.app>
