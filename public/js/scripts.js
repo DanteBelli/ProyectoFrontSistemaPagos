@@ -52,11 +52,11 @@ function sdgConsultar() {
 function sdgConsultarOC() {
     const selectedCheckbox = document.querySelector('.check-row:checked'); // Buscar la primera casilla de verificación seleccionada
     if (selectedCheckbox) {
-        const row = selectedCheckbox.closest('tr'); // Obtener la fila (tr) que contiene el checkbox seleccionado
-        const idCell = row.cells[2].textContent.trim(); // Obtener el valor de la columna "ID" (tercer columna)
+        const roww = selectedCheckbox.closest('tr'); // Obtener la fila (tr) que contiene el checkbox seleccionado
+        const idCelll = roww.cells[1].textContent.trim(); // Obtener el valor de la columna "ID" (tercer columna)
 
         // Redirigir a la ruta con el ID de la fila seleccionada como parámetro
-        window.location.href = `/sdgOcConsultar?id=${idCell}`;
+        window.location.href = `/sdgOcConsultar?id=${idCelll}`;
     } else {
         // Mostrar el modal de error
         const modal = document.getElementById('errorModal');

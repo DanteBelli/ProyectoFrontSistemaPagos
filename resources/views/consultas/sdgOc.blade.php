@@ -12,6 +12,7 @@
                 <thead>
                     <tr>
                         <th></th>
+                        <th>ID</th>
                         <th>Nro</th>
                         <th>Año</th>
                         <th>Fecha</th>
@@ -24,8 +25,9 @@
                     @foreach(range(1, 10) as $row) 
                         <tr>
                             <td><input type="checkbox" class="check-row" data-id="row{{ $row }}" /></td>
-                            <td>Fila {{ $row }} - Columna 1</td>
                             <td>2</td>
+                            <td>Fila {{ $row }} - Columna 2</td>
+                            <td>Fila {{ $row }} - Columna 3</td>
                             <td>Fila {{ $row }} - Columna 3</td>
                             <td>Fila {{ $row }} - Columna 4</td>
                             <td>Fila {{ $row }} - Columna 5</td>

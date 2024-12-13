@@ -2,7 +2,7 @@
     <x-slot name="header">
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
         <h1 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('SDG Oc Consulta') }}
+            {{ __('SDGOC Consulta') }}
         </h1>
     </x-slot>
     <div class="content">
