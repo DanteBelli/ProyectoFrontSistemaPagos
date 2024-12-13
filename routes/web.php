@@ -39,7 +39,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/cajaChica', function () {        
         return view('consultas.cajaChica');
     })->name('cajaChica');
-
     /*Rutas dropDownComedor*/
     Route::get('/comedor.sdg', function () {        
         return view('consultas.comedor.sdgCom');
@@ -50,7 +49,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/comedor.op', function () {        
         return view('consultas.comedor.opCom');
     })->name('comedor.op');
-
     /**Ruta SDGConsulta  envio el id como parametro*/
     Route::get('/sdgConsultar', function (Request $request) {
         $rowId = $request->get('id'); // Obtener el ID de la fila seleccionada
@@ -58,12 +56,14 @@ Route::middleware('auth')->group(function () {
     })->name('sdgConsultar');
 
      /**Ruta SDG OC Consulta  envio el id como parametro*/
-     Route::get('/sdgOcConsultar', function (Request $request) {
-        $rowwId = $request->get('idOc'); // Obtener el ID de la fila seleccionada
-        return view('consultas.sdgOcConsultar', compact('rowwId')); // Pasar el ID a la vista
+     Route::get('/sdgOcConsultar', function () {
+        return view('consultas.sdgOcConsultar'); // Pasar el ID a la vista
     })->name('sdgOcConsultar');
 
-
-
+    /** Ruta LiqDetalle */
+    Route::get('/liqDetalle', function (Request $request) {
+        $rowId = $request->get('id'); // Obtener el ID de la fila seleccionada
+        return view('consultas.liqDetalle', compact('rowId')); // Pasar el ID a la vista
+    })->name('liqDetalle');
 });
 require __DIR__.'/auth.php';

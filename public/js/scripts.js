@@ -50,13 +50,27 @@ function sdgConsultar() {
     }
 }
 function sdgConsultarOC() {
-    const selectedCheckbox = document.querySelector('.check-row:checked'); // Buscar la primera casilla de verificación seleccionada
-    if (selectedCheckbox) {
-        const roww = selectedCheckbox.closest('tr'); // Obtener la fila (tr) que contiene el checkbox seleccionado
-        const idCelll = roww.cells[1].textContent.trim(); // Obtener el valor de la columna "ID" (tercer columna)
+    const selectedCheckboxx = document.querySelector('.check-row:checked'); // Buscar la primera casilla de verificación seleccionada
+    if (selectedCheckboxx) {
+        const row = selectedCheckbox.closest('tr'); // Obtener la fila (tr) que contiene el checkbox seleccionado
+        const idCell = row.cells[1].textContent.trim(); // Obtener el valor de la columna "ID" (tercer columna)
 
         // Redirigir a la ruta con el ID de la fila seleccionada como parámetro
-        window.location.href = `/sdgOcConsultar?id=${idCelll}`;
+        window.location.href = `/sdgOcConsultar?id=${idCell}`;
+    } else {
+        // Mostrar el modal de error
+        const modal = document.getElementById('errorModal');
+        modal.classList.remove('hidden');
+    }
+}
+function liqConsultar() {
+    const selectedCheckboxxx = document.querySelector('.check-row:checked'); // Buscar la primera casilla de verificación seleccionada
+    if (selectedCheckboxxx) {
+        const row = selectedCheckbox.closest('tr'); // Obtener la fila (tr) que contiene el checkbox seleccionado
+        const idCell = row.cells[2].textContent.trim(); // Obtener el valor de la columna "ID" (tercer columna)
+
+        // Redirigir a la ruta con el ID de la fila seleccionada como parámetro
+        window.location.href = `/liqDetalle?id=${idCell}`;
     } else {
         // Mostrar el modal de error
         const modal = document.getElementById('errorModal');

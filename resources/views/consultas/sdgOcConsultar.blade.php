@@ -9,24 +9,24 @@
         <div class="max-w-4xl mx-auto mt-8">
         <form action="" method="POST">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <!-- Campo Numérico 1 -->
+                <!-- Nro -->
                 <div class="col-span-1">
                     <label for="campo_numero1" class="block text-sm font-medium text-white">Nro</label>
-                    <input type="number" name="campo_numero1" id="campo_numero1" 
+                    <input type="number" name="campo_numero1" id="nroOc" 
                         class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
                         value="" readonly>
                 </div>
-                <!-- Campo Numérico 2 -->
+                <!-- Año -->
                 <div class="col-span-1">
                     <label for="campo_numero2" class="block text-sm font-medium text-white">Año</label>
-                    <input type="number" name="campo_numero2" id="campo_numero2" 
+                    <input type="number" name="campo_numero2" id="anioOc" 
                         class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
                         value="" readonly>
                 </div>
-                <!-- Campo Double -->
+                <!-- Importe -->
                 <div class="col-span-1">
                     <label for="campo_double" class="block text-sm font-medium text-white">Importe</label>
-                    <input type="number" step="0.01" name="campo_double" id="campo_double" 
+                    <input type="number" step="0.01" name="campo_double" id="importeOc" 
                         class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
                         value="" readonly>
                 </div>
@@ -59,6 +59,7 @@
                     </tbody>
                 </table>
             </div>  
+            <br><br>
              <!--Grilla 2 -->
              <div class="table-responsive">
                 <table class="custom-table"> 
@@ -70,8 +71,7 @@
                             <th>Importe</th>
                             <th>SGG</th>
                             <th>RGG</th>
-                            <th>Concepto</th>
-
+                            <th>Observaciones</th>
                         </tr>
                     </thead>
                     <tbody>

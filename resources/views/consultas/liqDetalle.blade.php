@@ -2,7 +2,7 @@
     <x-slot name="header">
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
         <h1 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('SDG Consulta') }}
+            {{ __('Liquidacion Detalle') }}
         </h1>
     </x-slot>
     <div class="content">
@@ -12,79 +12,114 @@
                 <!-- Nro -->
                 <div class="col-span-1">
                     <label for="campo_numero1" class="block text-sm font-medium text-white">Nro</label>
-                    <input type="number" name="campo_numero1" id="nroSdg" 
+                    <input type="number" name="campo_numero1" id="nroLiq" 
                         class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
                         value="" readonly>
                 </div>
-                <!-- Nro Año -->
+                <!-- Año -->
                 <div class="col-span-1">
                     <label for="campo_numero2" class="block text-sm font-medium text-white">Año</label>
-                    <input type="number" name="campo_numero2" id="nroAñoSdg" 
+                    <input type="number" name="campo_numero2" id="anioLiq" 
                         class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
                         value="" readonly>
                 </div>
-                <!-- Fecha -->
+                <!-- Fecha-->
                 <div class="col-span-1">
                     <label for="campo_fecha1" class="block text-sm font-medium text-white">Fecha</label>
-                    <input type="date" name="campo_fecha1" id="fechaSdg" 
+                    <input type="date" name="campo_fecha1" id="fechaLiq" 
                         class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
                         value="" readonly>
                 </div>
-                <!-- Proveedor -->
+                <!-- Cuit -->
                 <div class="col-span-1">
-                    <label for="campo_string1" class="block text-sm font-medium text-white">Proveedor</label>
-                    <input type="text" name="campo_string1" id="proveedorSdg" 
+                    <label for="campo_string1" class="block text-sm font-medium text-white">Cuit</label>
+                    <input type="text" name="campo_string1" id="cuitLiq" 
                         class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
                         value="" readonly>
                 </div>
-                <!-- Fecha Emision -->
-                <div class="col-span-1">
-                    <label for="campo_fecha2" class="block text-sm font-medium text-white">Fecha Emision</label>
-                    <input type="date" name="campo_fecha2" id="fechaEmisionSdg" 
-                        class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
-                        value="" readonly>
-                </div>
-                <!-- Fecha Vencimiento-->
-                <div class="col-span-1">
-                    <label for="campo_fecha3" class="block text-sm font-medium text-white">Fecha Vencimiento</label>
-                    <input type="date" name="campo_fecha3" id="fechaVencSdg" 
-                        class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
-                        value="" readonly>
-                </div>
-                 <!-- Tipo Comprobante -->
+                 <!-- Razon Social -->
                  <div class="col-span-1">
-                    <label for="campo_string2" class="block text-sm font-medium text-white">Tipo Comprobante</label>
-                    <input type="text" name="campo_string2" id="tipoComprobanteSdg" 
+                    <label for="campo_string1" class="block text-sm font-medium text-white">Razon Social</label>
+                    <input type="text" name="campo_string1" id="razonSocialLiq" 
                         class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
                         value="" readonly>
                 </div>
-                <!-- Nro Comprobante -->
+                <!-- Fecha Vencimiento 1 -->
                 <div class="col-span-1">
-                    <label for="campo_string3" class="block text-sm font-medium text-white">Nro Comprobante</label>
-                    <input type="text" name="campo_string3" id="nroComprobanteSdg" 
+                    <label for="campo_fecha2" class="block text-sm font-medium text-white">Fecha Vencimiento 1</label>
+                    <input type="date" name="campo_fecha2" id="fechaVencLiq" 
                         class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
                         value="" readonly>
                 </div>
-                <!-- Importe -->
+                <!-- Fecha Vencimiento 2 -->
                 <div class="col-span-1">
-                    <label for="campo_double" class="block text-sm font-medium text-white">Importe</label>
-                    <input type="number" step="0.01" name="campo_double" id="importeSdg" 
+                    <label for="campo_fecha3" class="block text-sm font-medium text-white">Fecha Vencimiento 2</label>
+                    <input type="date" name="campo_fecha3" id="fechaVenc2Liq" 
+                        class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
+                        value="" readonly>
+                </div>
+                 <!-- A favor -->
+                 <div class="col-span-1">
+                    <label for="campo_string2" class="block text-sm font-medium text-white">A Favor De</label>
+                    <input type="text" name="campo_string2" id="afavorLiq" 
+                        class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
+                        value="" readonly>
+                </div>
+                <!-- Exp Año -->
+                <div class="col-span-1">
+                    <label for="campo_string3" class="block text-sm font-medium text-white">Exp Año</label>
+                    <input type="text" name="campo_string3" id="expAñoLiq" 
+                        class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
+                        value="" readonly>
+                </div>
+                <!-- Exp Nro -->
+                <div class="col-span-1">
+                    <label for="campo_double" class="block text-sm font-medium text-white">Exp Nro</label>
+                    <input type="text" name="" id="expNroLiq" 
                         class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
                         value="" readonly>
                 </div>
                 <!-- Estado -->
                 <div class="col-span-1">
                     <label for="campo_string4" class="block text-sm font-medium text-white">Estado</label>
-                    <input type="text" name="campo_string4" id="estadoSdg" 
+                    <input type="text" name="campo_string4" id="estadoLiq" 
                         class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
                         value="" readonly>
                 </div>
-                <!-- Conceptos -->
-                <div class="col-span-2">
-                    <label for="campo_texto" class="block text-sm font-medium text-white">Concepto</label>
-                    <textarea name="campo_texto" id="conceptoSdg" rows="4" 
+                <!-- Importe -->
+                <div class="col-span-1">
+                    <label for="campo_double" class="block text-sm font-medium text-white">Importe</label>
+                    <input type="number" step="0.01" name="campo_double" id="importeLiq" 
                         class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
-                        readonly></textarea>
+                        value="" readonly>
+                </div>
+                  <!-- Retenciones -->
+                  <div class="col-span-1">
+                    <label for="campo_double" class="block text-sm font-medium text-white">Total Retenciones</label>
+                    <input type="number" step="0.01" name="campo_double" id="retencionesLiq" 
+                        class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
+                        value="" readonly>
+                </div>
+                  <!-- Importe a Pagar -->
+                <div class="col-span-1">
+                    <label for="campo_double" class="block text-sm font-medium text-white">Importe A Pagar</label>
+                    <input type="number" step="0.01" name="campo_double" id="importePagarLiq" 
+                        class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
+                        value="" readonly>
+                </div>
+                <!-- Importe Letras -->
+                <div class="col-span-1">
+                    <label for="campo_string3" class="block text-sm font-medium text-white">Importe Letras</label>
+                    <input type="text" name="campo_string3" id="importeLetrasLiq" 
+                        class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
+                        value="" readonly>
+                </div>
+                <!-- Cantidad Comprobantes -->
+                <div class="col-span-1">
+                    <label for="campo_numero2" class="block text-sm font-medium text-white">Cant. Comprobante</label>
+                    <input type="number" name="campo_numero2" id="cantCompLiq" 
+                        class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
+                        value="" readonly>
                 </div>
             </div>
             <br><br>
