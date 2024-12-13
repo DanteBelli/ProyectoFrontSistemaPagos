@@ -56,7 +56,7 @@ function sdgConsultarOC() {
         const idCell = row.cells[2].textContent.trim(); // Obtener el valor de la columna "ID" (tercer columna)
 
         // Redirigir a la ruta con el ID de la fila seleccionada como parámetro
-        window.location.href = `/sdgOcConsultar.php?id=${idCell}`;
+        window.location.href = `/sdgOcConsultar?id=${idCell}`;
     } else {
         // Mostrar el modal de error
         const modal = document.getElementById('errorModal');

@@ -57,5 +57,13 @@ Route::middleware('auth')->group(function () {
         return view('consultas.sdgConsultar', compact('rowId')); // Pasar el ID a la vista
     })->name('sdgConsultar');
 
+     /**Ruta SDG OC Consulta  envio el id como parametro*/
+     Route::get('/sdgOcConsultar', function (Request $request) {
+        $rowId = $request->get('id'); // Obtener el ID de la fila seleccionada
+        return view('consultas.sdgOcConsultar', compact('rowId')); // Pasar el ID a la vista
+    })->name('sdgOcConsultar');
+
+
+
 });
 require __DIR__.'/auth.php';
