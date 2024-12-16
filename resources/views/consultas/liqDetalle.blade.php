@@ -124,16 +124,12 @@
                 </div>
             </div>
             <br><br>
-           
-            
 
-
-<!-- Solapa de Grillas-->
-
-<div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-    <!-- Contenedor de las solapas -->
-    <div class="border-b border-gray-200">
-        <nav class="flex space-x-8">
+            <!-- Solapa de Grillas-->
+            <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+            <!-- Contenedor de las solapas -->
+            <div class="border-b border-gray-200">
+            <nav class="flex space-x-8">
             <!-- Solapa 1 -->
             <a href="#" class="tab-link text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium" data-target="tab1">SDG Incluidas</a>
             <!-- Solapa 2 -->
@@ -144,7 +140,6 @@
             <a href="#" class="tab-link text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium" data-target="tab4">Firmas</a>
         </nav>
     </div>
-
     <div class="container">
         <!-- Contenido de las solapas -->
         <div class="tab-content mt-4">
@@ -189,7 +184,6 @@
                     </table>
                 </div>
             </div>
-
             <!-- Grilla 2 -->
             <div id="tab2" class="tab-content-item hidden">
                 <div class="table-responsive">
@@ -213,7 +207,6 @@
                     </table>
                 </div>
             </div>
-
             <!-- Solapa  Concepto Gastos-->
             <div id="tab3" class="tab-content-item hidden">
                 <<!-- Concepto -->
@@ -224,7 +217,6 @@
                         readonly></textarea>
                 </div>
             </div>
-
             <!-- Firmas -->
             <div id="tab4" class="tab-content-item hidden">
                  <div class="table-responsive">
@@ -266,11 +258,9 @@
             </div>
         </div>
     </div>
-
-
             <!-- Botón Volver -->
             <div class="mt-6">
-                <a href="{{ route('sdg') }}" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 text-center inline-block">Volver</a>
+                <a href="{{ route('liq') }}" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 text-center inline-block">Volver</a>
             </div>
         </form>
     </div>

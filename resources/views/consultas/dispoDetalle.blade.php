@@ -127,10 +127,6 @@
     <div class="container">
         <!-- Contenido de las solapas -->
         <div class="tab-content mt-4">
-
-
-
-
             <!-- Solapa  Concepto Gastos-->
             <div id="tab1" class="tab-content-item hidden">
                 <<!-- Concepto -->
@@ -227,7 +223,7 @@
     </div>
             <!-- Botón Volver -->
             <div class="mt-6">
-                <a href="{{ route('sdg') }}" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 text-center inline-block">Volver</a>
+                <a href="{{ route('dispo') }}" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 text-center inline-block">Volver</a>
             </div>
         </form>
     </div>
