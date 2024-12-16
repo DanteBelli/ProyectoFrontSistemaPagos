@@ -50,10 +50,10 @@ function sdgConsultar() {
     }
 }
 function sdgConsultarOC() {
-    const selectedCheckboxx = document.querySelector('.check-row:checked'); // Buscar la primera casilla de verificación seleccionada
-    if (selectedCheckboxx) {
+    const selectedCheckbox = document.querySelector('.check-row:checked'); // Buscar la primera casilla de verificación seleccionada
+    if (selectedCheckbox) {
         const row = selectedCheckbox.closest('tr'); // Obtener la fila (tr) que contiene el checkbox seleccionado
-        const idCell = row.cells[1].textContent.trim(); // Obtener el valor de la columna "ID" (tercer columna)
+        const idCell = row.cells[2].textContent.trim(); // Obtener el valor de la columna "ID" (tercer columna)
 
         // Redirigir a la ruta con el ID de la fila seleccionada como parámetro
         window.location.href = `/sdgOcConsultar?id=${idCell}`;
@@ -64,8 +64,8 @@ function sdgConsultarOC() {
     }
 }
 function liqConsultar() {
-    const selectedCheckboxxx = document.querySelector('.check-row:checked'); // Buscar la primera casilla de verificación seleccionada
-    if (selectedCheckboxxx) {
+    const selectedCheckbox = document.querySelector('.check-row:checked'); // Buscar la primera casilla de verificación seleccionada
+    if (selectedCheckbox) {
         const row = selectedCheckbox.closest('tr'); // Obtener la fila (tr) que contiene el checkbox seleccionado
         const idCell = row.cells[2].textContent.trim(); // Obtener el valor de la columna "ID" (tercer columna)
 
@@ -77,6 +77,38 @@ function liqConsultar() {
         modal.classList.remove('hidden');
     }
 }
+
+
+
+// script para manejar el cambio de solapas en LiqDetalle
+document.addEventListener('DOMContentLoaded', function () {
+    const tabLinks = document.querySelectorAll('.tab-link');
+    const tabContents = document.querySelectorAll('.tab-content-item');
+
+    // Función para mostrar la solapa seleccionada
+    function showTab(targetId) {
+        // Ocultar todas las grillas
+        tabContents.forEach(content => content.classList.add('hidden'));
+        // Mostrar la grilla correspondiente
+        document.getElementById(targetId).classList.remove('hidden');
+    }
+
+    // Asignar eventos de clic a las solapas
+    tabLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault(); // Prevenir el comportamiento por defecto del enlace
+            const targetId = e.target.getAttribute('data-target');
+            showTab(targetId);
+        });
+    });
+
+    // Inicialmente mostrar la primera solapa
+    showTab('tab1');
+});
+
+
+
+
 // Función para cerrar el modal
 function closeModal() {
     const modal = document.getElementById('errorModal');

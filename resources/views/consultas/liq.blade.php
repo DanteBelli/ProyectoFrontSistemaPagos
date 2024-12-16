@@ -13,8 +13,8 @@
                     <tr>
                         <th></th>
                         <th>Entidad</th>
-                        <th>Estado</th>
                         <th>ID</th>
+                        <th>Estado</th>
                         <th>Numero</th>
                         <th>Año</th>
                         <th>Fecha</th>
