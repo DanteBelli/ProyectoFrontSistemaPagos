@@ -125,3 +125,20 @@ function dispoConsultar() {
         modal.classList.remove('hidden');
     }
 }
+
+
+
+//OP Consultar
+function opConsultar() {
+    const selectedCheckbox = document.querySelector('.check-row:checked'); // Buscar la primera casilla de verificación seleccionada
+    if (selectedCheckbox) {
+        const row = selectedCheckbox.closest('tr'); // Obtener la fila (tr) que contiene el checkbox seleccionado
+        const idCell = row.cells[1].textContent.trim(); // Obtener el valor de la columna "ID" (tercer columna)
+        // Redirigir a la ruta con el ID de la fila seleccionada como parámetro
+        window.location.href = `/opDetalle?id=${idCell}`;
+    } else {
+        // Mostrar el modal de error
+        const modal = document.getElementById('errorModal');
+        modal.classList.remove('hidden');
+    }
+}
