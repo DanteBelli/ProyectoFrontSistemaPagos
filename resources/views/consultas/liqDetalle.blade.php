@@ -196,9 +196,7 @@
                     <table class="custom-table" id="liqDetalleGrilla2"> 
                         <thead>
                             <tr>
-                                <th>Fuente</th>
-                                <th>Programa</th>
-                                <th>Partida</th>
+                                <th>Impuesto</th>
                                 <th>Importe</th>
                             </tr>
                         </thead>
@@ -206,12 +204,8 @@
                             <tr>
                                 <td>Fila 1</td>
                                 <td>Fila 1</td>
-                                <td>Fila 1</td>
-                                <td>Fila 1</td>
                             </tr>
                             <tr>
-                                <td>Fila 2</td>
-                                <td>Fila 2</td>
                                 <td>Fila 2</td>
                                 <td>Fila 2</td>
                             </tr>
@@ -220,14 +214,55 @@
                 </div>
             </div>
 
-            <!-- Grilla 3 -->
+            <!-- Solapa  Concepto Gastos-->
             <div id="tab3" class="tab-content-item hidden">
-                <!-- Similar a las anteriores -->
+                <<!-- Concepto -->
+                <div class="col-span-2">
+                    <label for="campo_texto" class="block text-sm font-medium text-white">Concepto</label>
+                    <textarea name="campo_texto" id="conceptoLiq" rows="4" 
+                        class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
+                        readonly></textarea>
+                </div>
             </div>
 
-            <!-- Grilla 4 -->
+            <!-- Firmas -->
             <div id="tab4" class="tab-content-item hidden">
-                <!-- Similar a las anteriores -->
+                 <div class="table-responsive">
+                    <table class="custom-table" id="liqDetalleGrilla2"> 
+                        <thead>
+                            <tr>
+                                <th>Firma 1 Por</th>
+                                <th>Firma 1 El</th>
+                                <th>Firma 2 Por</th>
+                                <th>Firma 2 El</th>
+                                <th>Rechazado El</th>
+                                <th>Rechazado Por</th>
+                                <th>Motivo Rechazo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Fila 1</td>
+                                <td>Fila 1</td>
+                                <td>Fila 1</td>
+                                <td>Fila 1</td>
+                                <td>Fila 1</td>
+                                <td>Fila 1</td>
+                                <td>Fila 1</td>
+                            </tr>
+                            <tr>
+                                <td>Fila 2</td>
+                                <td>Fila 2</td>
+                                <td>Fila 2</td>
+                                <td>Fila 2</td>
+                                <td>Fila 2</td>
+                                <td>Fila 2</td>
+                                <td>Fila 2</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
