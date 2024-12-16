@@ -135,98 +135,102 @@
     <div class="border-b border-gray-200">
         <nav class="flex space-x-8">
             <!-- Solapa 1 -->
-            <a href="#" class="tab-link text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium" data-target="tab1">Solapa 1</a>
+            <a href="#" class="tab-link text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium" data-target="tab1">SDG Incluidas</a>
             <!-- Solapa 2 -->
-            <a href="#" class="tab-link text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium" data-target="tab2">Solapa 2</a>
+            <a href="#" class="tab-link text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium" data-target="tab2">Retenciones</a>
             <!-- Solapa 3 -->
-            <a href="#" class="tab-link text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium" data-target="tab3">Solapa 3</a>
+            <a href="#" class="tab-link text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium" data-target="tab3">Concepto Gastos</a>
             <!-- Solapa 4 -->
-            <a href="#" class="tab-link text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium" data-target="tab4">Solapa 4</a>
+            <a href="#" class="tab-link text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium" data-target="tab4">Firmas</a>
         </nav>
     </div>
 
-    <!-- Contenido de las solapas -->
-    <div class="tab-content mt-4">
-         <!--Grilla 1 -->
-         <div class="table-responsive">
-                <table class="custom-table"> 
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>NRO SDG</th>
-                            <th>Año</th>
-                            <th>Fecha</th>
-                            <th>Proveedor</th>
-                            <th>Tipo Compro</th>
-                            <th>Nro. Compro</th>
-                            <th>Importe $</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Fila 1</td>
-                            <td>Fila 1</td>
-                            <td>Fila 1</td>
-                            <td>Fila 1</td>
-                            <td>Fila 1</td>
-                            <td>Fila 1</td>
-                            <td>Fila 1</td>
-                            <td>Fila 1</td>
-                        </tr>
-                        <tr>
-                            <td>Fila 2</td>
-                            <td>Fila 2</td>
-                            <td>Fila 2</td>
-                            <td>Fila 2</td>
-                            <td>Fila 2</td>
-                            <td>Fila 2</td>
-                            <td>Fila 2</td>
-                            <td>Fila 2</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>    
+    <div class="container">
+        <!-- Contenido de las solapas -->
+        <div class="tab-content mt-4">
+            <!-- Grilla 1 -->
+            <div id="tab1" class="tab-content-item">
+                <div class="table-responsive">
+                    <table class="custom-table" id="liqDetalleGrilla1"> 
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>NRO SDG</th>
+                                <th>Año</th>
+                                <th>Fecha</th>
+                                <th>Proveedor</th>
+                                <th>Tipo Compro</th>
+                                <th>Nro. Compro</th>
+                                <th>Importe $</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Fila 1</td>
+                                <td>Fila 1</td>
+                                <td>Fila 1</td>
+                                <td>Fila 1</td>
+                                <td>Fila 1</td>
+                                <td>Fila 1</td>
+                                <td>Fila 1</td>
+                                <td>Fila 1</td>
+                            </tr>
+                            <tr>
+                                <td>Fila 2</td>
+                                <td>Fila 2</td>
+                                <td>Fila 2</td>
+                                <td>Fila 2</td>
+                                <td>Fila 2</td>
+                                <td>Fila 2</td>
+                                <td>Fila 2</td>
+                                <td>Fila 2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
-        <!-- Grilla 2 -->
-         <!--Grilla -->
-         <div class="table-responsive">
-                <table class="custom-table"> 
-                    <thead>
-                        <tr>
-                            <th>Fuente</th>
-                            <th>Programa</th>
-                            <th>Partida</th>
-                            <th>Importe</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Fila 1</td>
-                            <td>Fila 1</td>
-                            <td>Fila 1</td>
-                            <td>Fila 1</td>
-                        </tr>
-                        <tr>
-                            <td>Fila 2</td>
-                            <td>Fila 2</td>
-                            <td>Fila 2</td>
-                            <td>Fila 2</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>    
+            <!-- Grilla 2 -->
+            <div id="tab2" class="tab-content-item hidden">
+                <div class="table-responsive">
+                    <table class="custom-table" id="liqDetalleGrilla2"> 
+                        <thead>
+                            <tr>
+                                <th>Fuente</th>
+                                <th>Programa</th>
+                                <th>Partida</th>
+                                <th>Importe</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Fila 1</td>
+                                <td>Fila 1</td>
+                                <td>Fila 1</td>
+                                <td>Fila 1</td>
+                            </tr>
+                            <tr>
+                                <td>Fila 2</td>
+                                <td>Fila 2</td>
+                                <td>Fila 2</td>
+                                <td>Fila 2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
-        <!-- Grilla 3 -->
-        <div id="tab3" class="tab-content-item hidden">
-            <!-- Similar a las anteriores -->
-        </div>
+            <!-- Grilla 3 -->
+            <div id="tab3" class="tab-content-item hidden">
+                <!-- Similar a las anteriores -->
+            </div>
 
-        <!-- Grilla 4 -->
-        <div id="tab4" class="tab-content-item hidden">
-            <!-- Similar a las anteriores -->
+            <!-- Grilla 4 -->
+            <div id="tab4" class="tab-content-item hidden">
+                <!-- Similar a las anteriores -->
+            </div>
         </div>
     </div>
-</div>
 
 
             <!-- Botón Volver -->

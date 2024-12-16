@@ -78,26 +78,28 @@ function liqConsultar() {
     }
 }
 
-
-
 // script para manejar el cambio de solapas en LiqDetalle
-document.addEventListener('DOMContentLoaded', function () {
-    const tabLinks = document.querySelectorAll('.tab-link');
-    const tabContents = document.querySelectorAll('.tab-content-item');
+ // script para manejar el cambio de solapas en LiqDetalle
+ document.addEventListener('DOMContentLoaded', function () {
+    const tabLinks = document.querySelectorAll('.tab-link'); // Seleccionar todos los enlaces de las solapas
+    const tabContents = document.querySelectorAll('.tab-content-item'); // Seleccionar los contenidos de las solapas
 
     // Función para mostrar la solapa seleccionada
     function showTab(targetId) {
-        // Ocultar todas las grillas
+        // Ocultar todas las solapas
         tabContents.forEach(content => content.classList.add('hidden'));
-        // Mostrar la grilla correspondiente
-        document.getElementById(targetId).classList.remove('hidden');
+        // Mostrar la solapa correspondiente
+        const targetTab = document.getElementById(targetId);
+        if (targetTab) {
+            targetTab.classList.remove('hidden');
+        }
     }
 
     // Asignar eventos de clic a las solapas
     tabLinks.forEach(link => {
         link.addEventListener('click', function (e) {
             e.preventDefault(); // Prevenir el comportamiento por defecto del enlace
-            const targetId = e.target.getAttribute('data-target');
+            const targetId = e.target.getAttribute('data-target'); // Obtener el id de la solapa objetivo
             showTab(targetId);
         });
     });
