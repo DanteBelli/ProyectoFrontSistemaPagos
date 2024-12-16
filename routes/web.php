@@ -65,5 +65,12 @@ Route::middleware('auth')->group(function () {
         $rowId = $request->get('id'); // Obtener el ID de la fila seleccionada
         return view('consultas.liqDetalle', compact('rowId')); // Pasar el ID a la vista
     })->name('liqDetalle');
+
+    /**Ruta DispoDetalle*/
+    Route::get('/dispoDetalle', function (Request $request) {
+        $rowId = $request->get('id'); // Obtener el ID de la fila seleccionada
+        return view('consultas.dispoDetalle', compact('rowId')); // Pasar el ID a la vista
+    })->name('dispoDetalle');
+
 });
 require __DIR__.'/auth.php';

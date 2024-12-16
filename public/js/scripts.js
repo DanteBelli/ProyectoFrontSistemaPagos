@@ -68,7 +68,6 @@ function liqConsultar() {
     if (selectedCheckbox) {
         const row = selectedCheckbox.closest('tr'); // Obtener la fila (tr) que contiene el checkbox seleccionado
         const idCell = row.cells[2].textContent.trim(); // Obtener el valor de la columna "ID" (tercer columna)
-
         // Redirigir a la ruta con el ID de la fila seleccionada como parámetro
         window.location.href = `/liqDetalle?id=${idCell}`;
     } else {
@@ -83,7 +82,6 @@ function liqConsultar() {
  document.addEventListener('DOMContentLoaded', function () {
     const tabLinks = document.querySelectorAll('.tab-link'); // Seleccionar todos los enlaces de las solapas
     const tabContents = document.querySelectorAll('.tab-content-item'); // Seleccionar los contenidos de las solapas
-
     // Función para mostrar la solapa seleccionada
     function showTab(targetId) {
         // Ocultar todas las solapas
@@ -94,7 +92,6 @@ function liqConsultar() {
             targetTab.classList.remove('hidden');
         }
     }
-
     // Asignar eventos de clic a las solapas
     tabLinks.forEach(link => {
         link.addEventListener('click', function (e) {
@@ -103,16 +100,28 @@ function liqConsultar() {
             showTab(targetId);
         });
     });
-
     // Inicialmente mostrar la primera solapa
     showTab('tab1');
 });
-
-
-
 
 // Función para cerrar el modal
 function closeModal() {
     const modal = document.getElementById('errorModal');
     modal.classList.add('hidden');
+}
+
+
+//Dispo Consultar
+function dispoConsultar() {
+    const selectedCheckbox = document.querySelector('.check-row:checked'); // Buscar la primera casilla de verificación seleccionada
+    if (selectedCheckbox) {
+        const row = selectedCheckbox.closest('tr'); // Obtener la fila (tr) que contiene el checkbox seleccionado
+        const idCell = row.cells[2].textContent.trim(); // Obtener el valor de la columna "ID" (tercer columna)
+        // Redirigir a la ruta con el ID de la fila seleccionada como parámetro
+        window.location.href = `/dispoDetalle?id=${idCell}`;
+    } else {
+        // Mostrar el modal de error
+        const modal = document.getElementById('errorModal');
+        modal.classList.remove('hidden');
+    }
 }
