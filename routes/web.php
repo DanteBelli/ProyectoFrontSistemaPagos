@@ -72,5 +72,12 @@ Route::middleware('auth')->group(function () {
         return view('consultas.dispoDetalle', compact('rowId')); // Pasar el ID a la vista
     })->name('dispoDetalle');
 
+
+    /**Ruta OpDetalle*/
+    Route::get('/opDetalle', function (Request $request) {
+        $rowId = $request->get('id'); // Obtener el ID de la fila seleccionada
+        return view('consultas.opDetalle', compact('rowId')); // Pasar el ID a la vista
+    })->name('opDetalle');
+
 });
 require __DIR__.'/auth.php';
