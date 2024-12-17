@@ -143,7 +143,7 @@
                 </div>
                 <!-- Botón Volver -->
                 <div class="mt-6">
-                    <a href="{{ route('dispo') }}" class="w-auto bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 text-center inline-block">Volver</a>
+                    <a href="{{ route('op') }}" class="w-auto bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 text-center inline-block">Volver</a>
                 </div>
             </form>
         </div>
