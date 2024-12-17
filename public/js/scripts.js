@@ -140,9 +140,22 @@ function sueldoConsultar() {
     const selectedCheckbox = document.querySelector('.check-row:checked'); // Buscar la primera casilla de verificación seleccionada
     if (selectedCheckbox) {
         const row = selectedCheckbox.closest('tr'); // Obtener la fila (tr) que contiene el checkbox seleccionado
-        const idCell = row.cells[2].textContent.trim(); // Obtener el valor de la columna "ID" (tercer columna)
+        const idCell = row.cells[].textContent.trim(); // Obtener el valor de la columna "ID" (tercer columna)
         // Redirigir a la ruta con el ID de la fila seleccionada como parámetro
         window.location.href = `/sueldosDetalle?id=${idCell}`;
+    } else {
+        // Mostrar el modal de error
+        const modal = document.getElementById('errorModal');
+        modal.classList.remove('hidden');
+    }
+}//SDGComedor Consultar
+function sdgComConsultar() {
+    const selectedCheckbox = document.querySelector('.check-row:checked'); // Buscar la primera casilla de verificación seleccionada
+    if (selectedCheckbox) {
+        const row = selectedCheckbox.closest('tr'); // Obtener la fila (tr) que contiene el checkbox seleccionado
+        const idCell = row.cells[].textContent.trim(); // Obtener el valor de la columna "ID" (tercer columna)
+        // Redirigir a la ruta con el ID de la fila seleccionada como parámetro
+        window.location.href = `/sdgComDetalle.blade?id=${idCell}`;
     } else {
         // Mostrar el modal de error
         const modal = document.getElementById('errorModal');
