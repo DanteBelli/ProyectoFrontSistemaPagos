@@ -94,6 +94,7 @@
                     </div>
                     <!-- Letras Importe -->
                     <div class="col-span-1">
+                        <label for="importeDispo" class="block text-sm font-medium text-white">Importe Letras</label>
                         <input type="text" name="importeLetrasDispo" id="importeLetrasDispo" 
                             class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
                             value="" readonly>

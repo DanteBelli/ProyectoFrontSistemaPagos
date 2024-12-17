@@ -209,7 +209,7 @@
             </div>
             <!-- Solapa  Concepto Gastos-->
             <div id="tab3" class="tab-content-item hidden">
-                <<!-- Concepto -->
+                <!-- Concepto -->
                 <div class="col-span-2">
                     <label for="campo_texto" class="block text-sm font-medium text-white">Concepto</label>
                     <textarea name="campo_texto" id="conceptoLiq" rows="4" 
