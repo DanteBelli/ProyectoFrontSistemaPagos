@@ -42,13 +42,13 @@ Route::middleware('auth')->group(function () {
 
     /*Rutas dropDownComedor*/
     Route::get('/comedor.sdg', function () {        
-        return view('consultas.comedor.sdg');
+        return view('consultas.comedor.sdgCom');
     })->name('comedor.sdg');
-    Route::get('/comedor.liq', function () {        
-        return view('consultas.comedor.liq');
+    Route::get('/comedor.liqCom', function () {        
+        return view('consultas.comedor.liqCom');
     })->name('comedor.liq');
     Route::get('/comedor.op', function () {        
-        return view('consultas.comedor.op');
+        return view('consultas.comedor.opCom');
     })->name('comedor.op');
 
     /**Ruta SDGConsulta  envio el id como parametro*/

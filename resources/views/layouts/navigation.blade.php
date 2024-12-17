@@ -39,48 +39,33 @@
                         {{ __('Caja Chica') }}
                     </x-nav-link>
                 </div>
-                <!-- Aca arranca el comedor dropdown-->
-                    <div class="hidden sm:flex sm:items-center sm:ms-6">
-                        <x-dropdown align="right" width="48"  class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                        <x-slot name="trigger">
-                            <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
-                                <div>Comedor</div>
-                                <div class="ms-1">
-                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                    </svg>
-                                </div>
-                            </button>
-                        </x-slot>
-                         <!--DropDown del navbar menu-->
-                        <x-slot name="content">
-                            <form method="POST" action="{{ route('comedor.sdg') }}">
-                                @csrf
-                                <x-dropdown-link :href="route('comedor.sdg')"
-                                    onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                                    {{ __('SDG') }}
-                                </x-dropdown-link>
-                            </form>
-                            <form method="POST" action="{{ route('comedor.liq') }}">
-                                @csrf
-                                <x-dropdown-link :href="route('comedor.liq')"
-                                    onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                                    {{ __('LIQ') }}
-                                </x-dropdown-link>
-                            </form>
-                            <form method="POST" action="{{ route('comedor.op') }}">
-                                @csrf
-                                <x-dropdown-link :href="route('comedor.op')"
-                                    onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                                    {{ __('OP') }}
-                                </x-dropdown-link>
-                            </form>
-                        </x-slot>
-                        </x-dropdown>
-                    </div>
+                <!-- Admin Dropdown -->
+                <div class="hidden sm:flex sm:items-center sm:ml-6 pt-1">
+                <x-dropdown align="right" width="48">
+                    <x-slot name="trigger">
+                        <button class="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                            <div>Comedor</div>
+                            <div class="ml-1">
+                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </button>
+                    </x-slot>
+                    <x-slot name="content">
+                        <!-- Cambiar a x-dropdown-link para que tenga el mismo estilo -->
+                        <x-dropdown-link :href="route('comedor.sdg')" :active="request()->routeIs('comedor.sdg')">
+                            {{ __('SDG') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link :href="route('comedor.liq')" :active="request()->routeIs('comedor.liq')">
+                            {{ __('LIQ') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link :href="route('comedor.op')" :active="request()->routeIs('comedor.op')">
+                            {{ __('OP') }}
+                        </x-dropdown-link>
+                    </x-slot>
+                </x-dropdown>
+                </div>
                 </div>
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6">
@@ -158,30 +143,33 @@
                         {{ __('Caja Chica') }}
             </x-responsive-nav-link>
         </div>
-           <!-- Comedor Dropdown (Responsive) -->
-           <div class="space-y-1 pt-3">
+        <!-- Comedor Dropdown (Responsive) -->
+        <div class="space-y-1 pt-3">
             <p class="text-gray-500 dark:text-gray-400">{{ __('Comedor') }}</p>
-            <form method="POST" action="{{ route('comedor.sdg') }}">
-                @csrf
-                <x-responsive-nav-link :href="route('comedor.sdg')"
-                    onclick="event.preventDefault(); this.closest('form').submit();">
-                    {{ __('SDG') }}
-                </x-responsive-nav-link>
-            </form>
-            <form method="POST" action="{{ route('comedor.liq') }}">
-                @csrf
-                <x-responsive-nav-link :href="route('comedor.liq')"
-                    onclick="event.preventDefault(); this.closest('form').submit();">
-                    {{ __('LIQ') }}
-                </x-responsive-nav-link>
-            </form>
-            <form method="POST" action="{{ route('comedor.op') }}">
-                @csrf
-                <x-responsive-nav-link :href="route('comedor.op')"
-                    onclick="event.preventDefault(); this.closest('form').submit();">
-                    {{ __('OP') }}
-                </x-responsive-nav-link>
-            </form>
+                <form method="POST" action="{{ route('comedor.sdg') }}">
+                    @csrf
+                    <x-responsive-nav-link :href="route('comedor.sdg')"
+                        onclick="event.preventDefault(); this.closest('form').submit();"
+                        :active="request()->routeIs('comedor.sdg')">
+                        {{ __('SDG') }}
+                    </x-responsive-nav-link>
+                </form>
+                <form method="POST" action="{{ route('comedor.liq') }}">
+                    @csrf
+                    <x-responsive-nav-link :href="route('comedor.liq')"
+                        onclick="event.preventDefault(); this.closest('form').submit();"
+                        :active="request()->routeIs('comedor.liq')">
+                        {{ __('LIQ') }}
+                    </x-responsive-nav-link>
+                </form>
+                <form method="POST" action="{{ route('comedor.op') }}">
+                    @csrf
+                    <x-responsive-nav-link :href="route('comedor.op')"
+                        onclick="event.preventDefault(); this.closest('form').submit();"
+                        :active="request()->routeIs('comedor.op')">
+                        {{ __('OP') }}
+                    </x-responsive-nav-link>
+                </form>
         </div>
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200 dark:border-gray-600">
