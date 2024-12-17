@@ -76,7 +76,6 @@ function liqConsultar() {
         modal.classList.remove('hidden');
     }
 }
-
 // script para manejar el cambio de solapas en LiqDetalle
  // script para manejar el cambio de solapas en LiqDetalle
  document.addEventListener('DOMContentLoaded', function () {
@@ -103,14 +102,11 @@ function liqConsultar() {
     // Inicialmente mostrar la primera solapa
     showTab('tab1');
 });
-
 // Función para cerrar el modal
 function closeModal() {
     const modal = document.getElementById('errorModal');
     modal.classList.add('hidden');
 }
-
-
 //Dispo Consultar
 function dispoConsultar() {
     const selectedCheckbox = document.querySelector('.check-row:checked'); // Buscar la primera casilla de verificación seleccionada
@@ -125,9 +121,6 @@ function dispoConsultar() {
         modal.classList.remove('hidden');
     }
 }
-
-
-
 //OP Consultar
 function opConsultar() {
     const selectedCheckbox = document.querySelector('.check-row:checked'); // Buscar la primera casilla de verificación seleccionada
@@ -136,6 +129,20 @@ function opConsultar() {
         const idCell = row.cells[1].textContent.trim(); // Obtener el valor de la columna "ID" (tercer columna)
         // Redirigir a la ruta con el ID de la fila seleccionada como parámetro
         window.location.href = `/opDetalle?id=${idCell}`;
+    } else {
+        // Mostrar el modal de error
+        const modal = document.getElementById('errorModal');
+        modal.classList.remove('hidden');
+    }
+}
+//Sueldos Consultar
+function sueldoConsultar() {
+    const selectedCheckbox = document.querySelector('.check-row:checked'); // Buscar la primera casilla de verificación seleccionada
+    if (selectedCheckbox) {
+        const row = selectedCheckbox.closest('tr'); // Obtener la fila (tr) que contiene el checkbox seleccionado
+        const idCell = row.cells[2].textContent.trim(); // Obtener el valor de la columna "ID" (tercer columna)
+        // Redirigir a la ruta con el ID de la fila seleccionada como parámetro
+        window.location.href = `/sueldosDetalle?id=${idCell}`;
     } else {
         // Mostrar el modal de error
         const modal = document.getElementById('errorModal');

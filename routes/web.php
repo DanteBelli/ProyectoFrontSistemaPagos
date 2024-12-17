@@ -13,7 +13,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
     /*Rutas para el NavBar , estan dentro de auth para darle seguridad al sistema , asi me aseguro que este autenticado el usuario*/
     Route::get('/sdg', function () {        
         return view('consultas.sdg');
@@ -54,30 +53,30 @@ Route::middleware('auth')->group(function () {
         $rowId = $request->get('id'); // Obtener el ID de la fila seleccionada
         return view('consultas.sdgConsultar', compact('rowId')); // Pasar el ID a la vista
     })->name('sdgConsultar');
-
      /**Ruta SDG OC Consulta  envio el id como parametro*/
      Route::get('/sdgOcConsultar', function () {
         return view('consultas.sdgOcConsultar'); // Pasar el ID a la vista
     })->name('sdgOcConsultar');
-
     /** Ruta LiqDetalle */
     Route::get('/liqDetalle', function (Request $request) {
         $rowId = $request->get('id'); // Obtener el ID de la fila seleccionada
         return view('consultas.liqDetalle', compact('rowId')); // Pasar el ID a la vista
     })->name('liqDetalle');
-
     /**Ruta DispoDetalle*/
     Route::get('/dispoDetalle', function (Request $request) {
         $rowId = $request->get('id'); // Obtener el ID de la fila seleccionada
         return view('consultas.dispoDetalle', compact('rowId')); // Pasar el ID a la vista
     })->name('dispoDetalle');
-
-
     /**Ruta OpDetalle*/
     Route::get('/opDetalle', function (Request $request) {
         $rowId = $request->get('id'); // Obtener el ID de la fila seleccionada
         return view('consultas.opDetalle', compact('rowId')); // Pasar el ID a la vista
     })->name('opDetalle');
+    /**Ruta SueldoDetalle*/
+    Route::get('/sueldosDetalle', function (Request $request) {
+        $rowId = $request->get('id'); // Obtener el ID de la fila seleccionada
+        return view('consultas.sueldosDetalle', compact('rowId')); // Pasar el ID a la vista
+    })->name('sueldosDetalle');
 
 });
 require __DIR__.'/auth.php';
