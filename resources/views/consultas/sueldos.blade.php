@@ -61,7 +61,7 @@
             <input type="text" id="name-filter" class="filter-field" placeholder="Buscar por nombre...">
             <button onclick="filterData()">Filtrar</button>
             <button onclick="clearFilters()">Eliminar Filtros</button>
-            <button onclick="sueldoConsultar()">Ver Detalle</button>
+            <button onclick="sueldoConsultar()">Ver Sueldo</button>
         </div>
     </div>
     <!-- Modal Error-->
