@@ -76,9 +76,8 @@ function liqConsultar() {
         modal.classList.remove('hidden');
     }
 }
-// script para manejar el cambio de solapas en LiqDetalle
  // script para manejar el cambio de solapas en LiqDetalle
- document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
     const tabLinks = document.querySelectorAll('.tab-link'); // Seleccionar todos los enlaces de las solapas
     const tabContents = document.querySelectorAll('.tab-content-item'); // Seleccionar los contenidos de las solapas
     // Función para mostrar la solapa seleccionada
@@ -177,4 +176,17 @@ function opComDetalle() {
         modal.classList.remove('hidden');
     }
 }
-
+//OPComedor Consultar
+function liqComDetalle() {
+    const selectedCheckbox = document.querySelector('.check-row:checked'); // Buscar la primera casilla de verificación seleccionada
+    if (selectedCheckbox) {
+        const row = selectedCheckbox.closest('tr'); // Obtener la fila (tr) que contiene el checkbox seleccionado
+        const idCell = row.cells[3].textContent.trim(); // Obtener el valor de la columna "ID" (tercer columna)
+        // Redirigir a la ruta con el ID de la fila seleccionada como parámetro
+        window.location.href = `/liqComDetalle?id=${idCell}`;
+    } else {
+        // Mostrar el modal de error
+        const modal = document.getElementById('errorModal');
+        modal.classList.remove('hidden');
+    }
+}

@@ -20,7 +20,7 @@
                         <th>Fecha Vencimiento</th>
                         <th>Importe</th>
                         <th>Cta Pagadora</th>
-                        <th>Estado</th>a
+                        <th>Estado</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -62,7 +62,7 @@
             <input type="text" id="name-filter" class="filter-field" placeholder="Buscar por nombre...">
             <button onclick="filterData()">Filtrar</button>
             <button onclick="clearFilters()">Eliminar Filtros</button>
-            <button onclick="opComDetalle()">Ver SDG</button>
+            <button onclick="opComDetalle()">Ver Detalle</button>
         </div>
     </div>
     <!-- Modal Error-->

@@ -51,7 +51,7 @@ Route::middleware('auth')->group(function () {
         return view('consultas.comedor.opCom');
     })->name('comedor.op');
 
-    /*Ruta Comedor SDG*/
+    /*Ruta Comedor SDGDetalle*/
     Route::get('/sdgComDetalle', function (Request $request) {
         $rowId = $request->get('id'); // Obtener el ID de la fila seleccionada
         return view('consultas.comedor.sdgComDetalle', compact('rowId')); // Pasar el ID a la vista
@@ -62,6 +62,12 @@ Route::middleware('auth')->group(function () {
         $rowId = $request->get('id'); // Obtener el ID de la fila seleccionada
         return view('consultas.comedor.opComDetalle', compact('rowId')); // Pasar el ID a la vista
     })->name('opComDetalle');
+
+    /**Ruta liqComDetalle*/
+    Route::get('/liqComDetalle', function (Request $request) {
+        $rowId = $request->get('id'); // Obtener el ID de la fila seleccionada
+        return view('consultas.comedor.liqComDetalle', compact('rowId')); // Pasar el ID a la vista
+    })->name('liqComDetalle');
 
     /**Ruta SDGConsulta  envio el id como parametro*/
     Route::get('/sdgConsultar', function (Request $request) {
