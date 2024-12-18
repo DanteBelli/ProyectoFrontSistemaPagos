@@ -82,16 +82,14 @@
                         </button>
                     </x-slot>
                     <x-slot name="content">
-                       <!-- Comento la parte de editar perfil ya que no sera utilizada
-                             <x-dropdown-link :href="route('profile.edit')">
+                    <!-- Comento la parte de editar perfil ya que no sera utilizada
+                            <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Profile') }}
                         </x-dropdown-link>
                         -->
                         <!-- Ayuda -->
-                       
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-
                             <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
@@ -146,7 +144,7 @@
         <!-- Comedor Dropdown (Responsive) -->
         <div class="space-y-1 pt-3">
             <p class="text-gray-500 dark:text-gray-400">{{ __('Comedor') }}</p>
-                <form method="POST" action="{{ route('comedor.sdg') }}">
+                <form method="GET" action="{{ route('comedor.sdg') }}">
                     @csrf
                     <x-responsive-nav-link :href="route('comedor.sdg')"
                         onclick="event.preventDefault(); this.closest('form').submit();"
@@ -154,7 +152,7 @@
                         {{ __('SDG') }}
                     </x-responsive-nav-link>
                 </form>
-                <form method="POST" action="{{ route('comedor.liq') }}">
+                <form method="GET" action="{{ route('comedor.liq') }}">
                     @csrf
                     <x-responsive-nav-link :href="route('comedor.liq')"
                         onclick="event.preventDefault(); this.closest('form').submit();"
@@ -162,7 +160,7 @@
                         {{ __('LIQ') }}
                     </x-responsive-nav-link>
                 </form>
-                <form method="POST" action="{{ route('comedor.op') }}">
+                <form method="GET" action="{{ route('comedor.op') }}">
                     @csrf
                     <x-responsive-nav-link :href="route('comedor.op')"
                         onclick="event.preventDefault(); this.closest('form').submit();"
@@ -178,7 +176,7 @@
                 <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
             </div>
             <div class="mt-3 space-y-1">
-               <!-- <x-responsive-nav-link :href="route('profile.edit')">
+            <!-- <x-responsive-nav-link :href="route('profile.edit')">
                     {{ __('Profile') }}
                 </x-responsive-nav-link>
                 -->
