@@ -51,8 +51,8 @@
                         class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
                         value="" readonly>
                 </div>
-                 <!-- Tipo Comprobante -->
-                 <div class="col-span-1">
+                <!-- Tipo Comprobante -->
+                <div class="col-span-1">
                     <label for="campo_string2" class="block text-sm font-medium text-white">Tipo Comprobante</label>
                     <input type="text" name="campo_string2" id="tipoComprobanteSdg" 
                         class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 

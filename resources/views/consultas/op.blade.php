@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h1 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Consultar OP') }}
+            {{ __('OP') }}
         </h1>
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
         <script src="{{ asset('js/scripts.js') }}"></script>

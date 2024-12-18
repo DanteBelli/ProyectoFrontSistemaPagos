@@ -2,7 +2,7 @@
     <x-slot name="header">
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
         <h1 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('SDGOC Consulta') }}
+            {{ __('SDG OC Consulta') }}
         </h1>
     </x-slot>
     <div class="content">
@@ -60,8 +60,8 @@
                 </table>
             </div>  
             <br><br>
-             <!--Grilla 2 -->
-             <div class="table-responsive">
+            <!--Grilla 2 -->
+            <div class="table-responsive">
                 <table class="custom-table"> 
                     <thead>
                         <tr>
