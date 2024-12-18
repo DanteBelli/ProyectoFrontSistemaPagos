@@ -85,7 +85,6 @@
                             <a href="#" class="tab-link text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium" data-target="tab2">Extras</a>
                         </nav>
                     </div>
-
                     <div class="container">
                         <!-- Contenido de las solapas -->
                         <div class="tab-content mt-4">
@@ -148,4 +147,4 @@
             </form>
         </div>
     </div>
-</x-app-layout>
+</x-app-layout>a

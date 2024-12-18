@@ -38,8 +38,8 @@
                         class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
                         value="" readonly>
                 </div>
-                 <!-- Razon Social -->
-                 <div class="col-span-1">
+                <!-- Razon Social -->
+                <div class="col-span-1">
                     <label for="campo_string1" class="block text-sm font-medium text-white">Razon Social</label>
                     <input type="text" name="campo_string1" id="razonSocialLiq" 
                         class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
@@ -59,8 +59,8 @@
                         class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
                         value="" readonly>
                 </div>
-                 <!-- A favor -->
-                 <div class="col-span-1">
+                <!-- A favor -->
+                <div class="col-span-1">
                     <label for="campo_string2" class="block text-sm font-medium text-white">A Favor De</label>
                     <input type="text" name="campo_string2" id="afavorLiq" 
                         class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
@@ -94,14 +94,14 @@
                         class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
                         value="" readonly>
                 </div>
-                  <!-- Retenciones -->
-                  <div class="col-span-1">
+                <!-- Retenciones -->
+                <div class="col-span-1">
                     <label for="campo_double" class="block text-sm font-medium text-white">Total Retenciones</label>
                     <input type="number" step="0.01" name="campo_double" id="retencionesLiq" 
                         class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
                         value="" readonly>
                 </div>
-                  <!-- Importe a Pagar -->
+                <!-- Importe a Pagar -->
                 <div class="col-span-1">
                     <label for="campo_double" class="block text-sm font-medium text-white">Importe A Pagar</label>
                     <input type="number" step="0.01" name="campo_double" id="importePagarLiq" 
@@ -219,7 +219,7 @@
             </div>
             <!-- Firmas -->
             <div id="tab4" class="tab-content-item hidden">
-                 <div class="table-responsive">
+                <div class="table-responsive">
                     <table class="custom-table" id="liqDetalleGrilla2"> 
                         <thead>
                             <tr>
