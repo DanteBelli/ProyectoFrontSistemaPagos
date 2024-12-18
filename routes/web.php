@@ -52,11 +52,16 @@ Route::middleware('auth')->group(function () {
     })->name('comedor.op');
 
     /*Ruta Comedor SDG*/
-       Route::get('/sdgComDetalle', function (Request $request) {
+    Route::get('/sdgComDetalle', function (Request $request) {
         $rowId = $request->get('id'); // Obtener el ID de la fila seleccionada
         return view('consultas.comedor.sdgComDetalle', compact('rowId')); // Pasar el ID a la vista
     })->name('sdgComDetalle');
 
+    /**Ruta opComDetalle*/
+    Route::get('/opComDetalle', function (Request $request) {
+        $rowId = $request->get('id'); // Obtener el ID de la fila seleccionada
+        return view('consultas.comedor.opComDetalle', compact('rowId')); // Pasar el ID a la vista
+    })->name('opComDetalle');
 
     /**Ruta SDGConsulta  envio el id como parametro*/
     Route::get('/sdgConsultar', function (Request $request) {
@@ -64,8 +69,8 @@ Route::middleware('auth')->group(function () {
         return view('consultas.sdgConsultar', compact('rowId')); // Pasar el ID a la vista
     })->name('sdgConsultar');
 
-     /**Ruta SDG OC Consulta  envio el id como parametro*/
-     Route::get('/sdgOcConsultar', function () {
+    /**Ruta SDG OC Consulta  envio el id como parametro*/
+    Route::get('/sdgOcConsultar', function () {
         return view('consultas.sdgOcConsultar'); // Pasar el ID a la vista
     })->name('sdgOcConsultar');
 
