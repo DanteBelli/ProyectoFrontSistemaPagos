@@ -60,17 +60,17 @@
                 <option value="nro">NRO</option>
                 <option value="anio">AÑO</option>
                 <option value="proveedorNombre">Proveedor Nombre</option>
-                <option value="tipoCompro">A favor de</option>
-                <option value="nroComprobante">Importe Bruto</option>
-                <option value="importe">Total Reten</option>
-                <option value="concepto">Importe Pago</option>
-                <option value="estadoDescrip">Concepto</option>
+                <option value="afavor">A favor de</option>
+                <option value="impBruto">Importe Bruto</option>
+                <option value="totReten">Total Reten</option>
+                <option value="impPago">Importe Pago</option>
+                <option value="concepto">Concepto</option>
                 <option value="expNro">Exp Nro</option>
                 <option value="expAnio">Exp Año</option>
-                <option value="verifPor">Anexo Nro</option>
-                <option value="idProve">Anexo Año</option>
-                <option value="tCompro">Id Estado</option>
-                <option value="expNro">Cuit</option>
+                <option value="anexoNro">Anexo Nro</option>
+                <option value="anexoAnio">Anexo Año</option>
+                <option value="IdEstado">Id Estado</option>
+                <option value="cuit">Cuit</option>
             </select>
             <input type="text" id="name-filter" class="filter-field" placeholder="Buscar por nombre...">
             <button onclick="filterData()">Filtrar</button>

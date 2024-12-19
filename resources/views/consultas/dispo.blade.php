@@ -55,20 +55,20 @@
                 <option value="">Selecciona una categoría</option>
                 <option value="idEstado">ID</option>
                 <option value="nro">NRO</option>
-                <option value="anio">Expediente Nro</option>
-                <option value="proveedorNombre">Expediente Año</option>
-                <option value="tipoCompro">Anexo Año</option>
-                <option value="nroComprobante">Anexo Numero</option>
-                <option value="importe">Concepto</option>
-                <option value="concepto">Estado</option>
-                <option value="estadoDescrip">Proveedor</option>
-                <option value="expNro">Importe</option>
-                <option value="expAnio">Firmante</option>
-                <option value="verifPor">Id Firmante</option>
-                <option value="idProve">Cargo Firma</option>
-                <option value="tCompro">Id Estado</option>
-                <option value="expNro">Id Proveedor</option>
-                <option value="expNro">Proveedor Cuit</option>
+                <option value="expNro">Expediente Nro</option>
+                <option value="expAnio">Expediente Año</option>
+                <option value="anexo">Anexo Año</option>
+                <option value="anexoNro">Anexo Numero</option>
+                <option value="concepto">Concepto</option>
+                <option value="estado">Estado</option>
+                <option value="proveedor">Proveedor</option>
+                <option value="importe">Importe</option>
+                <option value="firmante">Firmante</option>
+                <option value="idFirm">Id Firmante</option>
+                <option value="cargoFirm">Cargo Firma</option>
+                <option value="idEstado">Id Estado</option>
+                <option value="idProv">Id Proveedor</option>
+                <option value="provCuit">Proveedor Cuit</option>
             </select>
             <input type="text" id="name-filter" class="filter-field" placeholder="Buscar por nombre...">
             <button onclick="filterData()">Filtrar</button>

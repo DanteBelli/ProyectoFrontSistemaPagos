@@ -50,7 +50,7 @@
             <select id="category-filter" class="filter-field">
                 <option value="">Selecciona una categoría</option>
                 <option value="idEstado">Estado</option>
-                <option value="idEstado">ID</option>
+                <option value="id">ID</option>
                 <option value="nro">NRO</option>
                 <option value="anio">Año</option>
                 <option value="proveedorNombre">Proveedor Nombre</option>

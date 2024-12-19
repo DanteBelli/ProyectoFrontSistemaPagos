@@ -58,10 +58,10 @@
                 <option value="importe">Importe</option>
                 <option value="concepto">Concepto</option>
                 <option value="estadoDescrip">Estado</option>
-                <option value="expNro">Verificado Por</option>
-                <option value="expAnio">ID Proveedor</option>
-                <option value="verifPor">ID Estado</option>
-                <option value="idProve">TCOMPRO</option>
+                <option value="verifPor">Verificado Por</option>
+                <option value="idProv">ID Proveedor</option>
+                <option value="idEstado">ID Estado</option>
+                <option value="tCompro">TCOMPRO</option>
             </select>
             <input type="text" id="name-filter" class="filter-field" placeholder="Buscar por nombre...">
             <button onclick="filterData()">Filtrar</button>
