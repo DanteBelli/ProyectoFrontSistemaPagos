@@ -42,22 +42,17 @@
             </table>
         </div>
         <!-- Filtros debajo de la tabla -->
-        <div class="filter-container" style="margin-top: 20px;">
+         <div class="filter-container" style="margin-top: 20px;">
             <select id="category-filter" class="filter-field">
                 <option value="">Selecciona una categoría</option>
-                <option value="idEstado">ID</option>
-                <option value="nro">NRO</option>
+                <option value="nroEsidif">Nro Esidif</option>
                 <option value="anio">Año</option>
-                <option value="proveedorNombre">Proveedor Nombre</option>
-                <option value="tipoCompro">Tipo Comprobante</option>
-                <option value="nroComprobante">Numero Comprobante</option>
                 <option value="importe">Importe</option>
-                <option value="concepto">Concepto</option>
-                <option value="estadoDescrip">Estado</option>
-                <option value="expNro">Verificado Por</option>
-                <option value="expAnio">ID Proveedor</option>
-                <option value="verifPor">ID Estado</option>
-                <option value="idProve">TCOMPRO</option>
+                <option value="cuentaPagador">Cuent Pagador</option>
+                <option value="estado">Estado</option>
+                <option value="notas">Notas</option>
+                <option value="idCuentaPaga">ID Cuenta Paga</option>
+                <option value="idEstado">ID Estado</option>
             </select>
             <input type="text" id="name-filter" class="filter-field" placeholder="Buscar por nombre...">
             <button onclick="filterData()">Filtrar</button>

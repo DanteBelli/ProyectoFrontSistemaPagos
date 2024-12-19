@@ -65,7 +65,6 @@
                 <option value="anexoanio">Anexo Año</option>
                 <option value="idEstado">Id Estado</option>
                 <option value="cuit">Cuit</option>
-
             </select>
             <input type="text" id="name-filter" class="filter-field" placeholder="Buscar por nombre...">
             <button onclick="filterData()">Filtrar</button>
