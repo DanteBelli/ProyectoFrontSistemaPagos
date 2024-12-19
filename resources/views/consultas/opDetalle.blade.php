@@ -131,7 +131,7 @@
                             <div id="tab2" class="tab-content-item hidden">
                                 <!-- Concepto -->
                                 <div class="col-span-2">
-                                    <label for="campo_texto" class="block text-sm font-medium text-white">Extra</label>
+                                    <label for="campo_texto" class="block text-sm font-medium text-white">Extras</label>
                                     <textarea name="campo_texto" id="conceptoOp" rows="4" 
                                     class="mt-1 block w-full bg-gray-200 border-gray-300 rounded-md shadow-sm" 
                                     readonly></textarea>
@@ -147,4 +147,4 @@
             </form>
         </div>
     </div>
-</x-app-layout>a
+</x-app-layout>
