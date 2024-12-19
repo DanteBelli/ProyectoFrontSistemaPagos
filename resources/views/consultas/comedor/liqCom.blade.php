@@ -49,19 +49,23 @@
         <div class="filter-container" style="margin-top: 20px;">
             <select id="category-filter" class="filter-field">
                 <option value="">Selecciona una categoría</option>
+                <option value="idEstado">Estado</option>
                 <option value="idEstado">ID</option>
                 <option value="nro">NRO</option>
                 <option value="anio">Año</option>
                 <option value="proveedorNombre">Proveedor Nombre</option>
-                <option value="tipoCompro">Tipo Comprobante</option>
-                <option value="nroComprobante">Numero Comprobante</option>
-                <option value="importe">Importe</option>
+                <option value="afavor">A favor De</option>
+                <option value="importe">Importe Bruto</option>
+                <option value="retenciones">Total Retenciones</option>
+                <option value="importePago">Importe Pago</option>
                 <option value="concepto">Concepto</option>
-                <option value="estadoDescrip">Estado</option>
-                <option value="expNro">Verificado Por</option>
-                <option value="expAnio">ID Proveedor</option>
-                <option value="verifPor">ID Estado</option>
-                <option value="idProve">TCOMPRO</option>
+                <option value="ccanro">CCA NRO</option>
+                <option value="ccaanio">CCA AÑO</option>
+                <option value="anexoNro">Anexo Nro</option>
+                <option value="anexoanio">Anexo Año</option>
+                <option value="idEstado">Id Estado</option>
+                <option value="cuit">Cuit</option>
+
             </select>
             <input type="text" id="name-filter" class="filter-field" placeholder="Buscar por nombre...">
             <button onclick="filterData()">Filtrar</button>
