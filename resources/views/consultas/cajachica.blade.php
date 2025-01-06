@@ -19,11 +19,6 @@
         </div>
     </div>
 
-    <!-- Cargar JS solo si es necesario -->
-    @if(Route::currentRouteName() == 'nombre_de_ruta_especifica')
         <script src="{{ asset('js/scripts.js') }}"></script>
-    @endif
-
-    <!-- Cargar el archivo de estilos solo si es necesario -->
-    <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
 </x-app-layout>
